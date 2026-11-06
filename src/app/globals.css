@@ -1,0 +1,165 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Background */
+  --background: #FFFFFF;
+  --background-alt: #F5F2EE;
+
+  /* Foreground / Text */
+  --foreground: #1A1A1A;
+  --muted-foreground: #6B6B6B;
+
+  /* Accent (warm brown — italic headings, highlights) */
+  --accent: #8B6914;
+  --accent-foreground: #FFFFFF;
+
+  /* Primary (dark brown — buttons, icons) */
+  --primary: #3D2E1C;
+  --primary-foreground: #FFFFFF;
+
+  /* Secondary */
+  --secondary: #F5F2EE;
+  --secondary-foreground: #3D2E1C;
+
+  /* Muted */
+  --muted: #F5F2EE;
+
+  /* Card */
+  --card: #FFFFFF;
+  --card-foreground: #1A1A1A;
+  --card-highlight: #1C1410;
+  --card-highlight-foreground: #F5F2EE;
+
+  /* Popover */
+  --popover: #FFFFFF;
+  --popover-foreground: #1A1A1A;
+
+  /* Border & Ring */
+  --border: #E5E0DA;
+  --input: #E5E0DA;
+  --ring: #8B6914;
+
+  /* Semantic */
+  --destructive: #DC2626;
+  --success: #4A7C4F;
+
+  /* Dark Sections (used in light mode too) */
+  --dark-section: #1C1410;
+  --dark-section-foreground: #F5F2EE;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+
+  /* Spacing (section-level) */
+  --section-padding-y: 4rem;
+  --section-padding-y-md: 6rem;
+  --container-max-width: 80rem;
+  --container-padding-x: 1rem;
+}
+
+.dark {
+  /* Background */
+  --background: #121010;
+  --background-alt: #1C1410;
+
+  /* Foreground / Text */
+  --foreground: #F5F2EE;
+  --muted-foreground: #A89F94;
+
+  /* Accent */
+  --accent: #C9A44C;
+  --accent-foreground: #1A1A1A;
+
+  /* Primary */
+  --primary: #C9A44C;
+  --primary-foreground: #1A1A1A;
+
+  /* Secondary */
+  --secondary: #2A2220;
+  --secondary-foreground: #F5F2EE;
+
+  /* Muted */
+  --muted: #2A2220;
+
+  /* Card */
+  --card: #1E1A17;
+  --card-foreground: #F5F2EE;
+  --card-highlight: #2A2220;
+  --card-highlight-foreground: #F5F2EE;
+
+  /* Popover */
+  --popover: #1E1A17;
+  --popover-foreground: #F5F2EE;
+
+  /* Border & Ring */
+  --border: #3D3530;
+  --input: #3D3530;
+  --ring: #C9A44C;
+
+  /* Semantic */
+  --destructive: #EF4444;
+  --success: #6ABF6E;
+
+  /* Dark Sections */
+  --dark-section: #0D0B09;
+  --dark-section-foreground: #F5F2EE;
+
+  /* Shadows */
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.15);
+  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@theme inline {
+  --font-sans: var(--font-sans);
+  --font-heading: var(--font-heading);
+
+  /* Register standard shadcn color tokens for Tailwind v4 */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* StudioSpace-specific custom tokens */
+  --color-background-alt: var(--background-alt);
+  --color-card-highlight: var(--card-highlight);
+  --color-card-highlight-foreground: var(--card-highlight-foreground);
+  --color-success: var(--success);
+  --color-dark-section: var(--dark-section);
+  --color-dark-section-foreground: var(--dark-section-foreground);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  html {
+    @apply font-sans;
+  }
+}

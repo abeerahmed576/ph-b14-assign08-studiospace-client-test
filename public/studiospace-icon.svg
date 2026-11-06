@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" width="48" height="48">
+  <defs>
+    <linearGradient id="ss-accent-grad" x1="6" y1="6" x2="42" y2="42" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#C9A44C" />
+      <stop offset="50%" stop-color="#A27D26" />
+      <stop offset="100%" stop-color="#6F5210" />
+    </linearGradient>
+    <radialGradient id="ss-lens-glow" cx="24" cy="24" r="10" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F5F2EE" stop-opacity="0.9" />
+      <stop offset="60%" stop-color="#C9A44C" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#8B6914" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Outer Spotlight Rim -->
+  <circle cx="24" cy="24" r="21" stroke="url(#ss-accent-grad)" stroke-width="2.5" />
+  
+  <!-- Studio Spotlight Barndoors / Lens Mount Accents -->
+  <circle cx="24" cy="24" r="18" stroke="url(#ss-accent-grad)" stroke-width="1" stroke-dasharray="2 3" opacity="0.6" />
+  
+  <!-- Aperture Blades (6-blade interlocking iris) -->
+  <path d="M 24 10 L 33 19 L 29 24 Z" fill="url(#ss-accent-grad)" fill-opacity="0.85" />
+  <path d="M 36 17 L 36 29 L 29 27 Z" fill="url(#ss-accent-grad)" fill-opacity="0.75" />
+  <path d="M 36 31 L 27 38 L 24 33 Z" fill="url(#ss-accent-grad)" fill-opacity="0.85" />
+  <path d="M 24 38 L 15 29 L 19 24 Z" fill="url(#ss-accent-grad)" fill-opacity="0.75" />
+  <path d="M 12 31 L 12 19 L 19 21 Z" fill="url(#ss-accent-grad)" fill-opacity="0.85" />
+  <path d="M 12 17 L 21 10 L 24 15 Z" fill="url(#ss-accent-grad)" fill-opacity="0.75" />
+
+  <!-- Focal Spotlight Core Glow -->
+  <circle cx="24" cy="24" r="7" fill="url(#ss-lens-glow)" />
+  <circle cx="24" cy="24" r="3" fill="#FFFFFF" />
+</svg>
+
